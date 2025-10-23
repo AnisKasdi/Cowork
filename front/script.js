@@ -52,7 +52,7 @@ function handleLogin(event) {
         sessionStorage.setItem('user', JSON.stringify(userData));
         
         // Afficher un message de succès
-        showNotification('Connexion réussie ! Bienvenue 👋', 'success');
+    showNotification('Connexion réussie ! Bienvenue', 'success');
         
         // Rediriger vers le dashboard après un court délai
         setTimeout(() => {
@@ -90,7 +90,7 @@ function handleRegister(event) {
         
         sessionStorage.setItem('user', JSON.stringify(userData));
         
-        showNotification('Compte créé avec succès ! 🎉', 'success');
+    showNotification('Compte créé avec succès !', 'success');
         
         setTimeout(() => {
             showDashboard();
@@ -104,7 +104,7 @@ function handleRegister(event) {
 function logout() {
     if (confirm('Êtes-vous sûr de vouloir vous déconnecter ?')) {
         sessionStorage.removeItem('user');
-        showNotification('Déconnexion réussie. À bientôt ! 👋', 'success');
+    showNotification('Déconnexion réussie. À bientôt !', 'success');
         setTimeout(() => {
             showIndex();
         }, 1000);
@@ -216,7 +216,7 @@ function followUser(userName) {
 
 function likePost(postId) {
     console.log('Like post:', postId);
-    showNotification('👍 Publication aimée !', 'success');
+    showNotification('Publication aimée !', 'success');
 }
 
 function commentPost(postId) {
@@ -308,8 +308,8 @@ function toggleTheme() {
 }
 
 // Messages d'aide au démarrage
-console.log('🎓 StudyHub - Application de Coworking Étudiant');
-console.log('📱 Navigation disponible:');
+console.log('StudyHub - Application de Coworking Étudiant');
+console.log('Navigation disponible:');
 console.log('   - showIndex() : Page d\'accueil');
 console.log('   - showLogin() : Page de connexion');
 console.log('   - showRegister() : Page d\'inscription');

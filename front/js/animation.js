@@ -15,6 +15,8 @@ const observer = new IntersectionObserver((entries) => {
 
 // Observer tous les éléments à animer
 document.addEventListener('DOMContentLoaded', () => {
+    // Mark the document as JS-enabled so CSS can apply initial hidden state for animations.
+    document.documentElement.classList.add('js-enabled');
     // Steps
     const stepCards = document.querySelectorAll('.step-card');
     stepCards.forEach(card => observer.observe(card));
@@ -174,4 +176,4 @@ function createParticles() {
 // Décommenter pour activer les particules
 // createParticles();
 
-console.log('✨ Animations StudyHub chargées');
+console.log('Animations StudyHub chargées');

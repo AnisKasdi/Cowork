@@ -165,7 +165,7 @@ if (loginForm) {
                 
                 localStorage.setItem('studyhub_user', JSON.stringify(userData));
                 
-                showNotification('Connexion réussie ! Bienvenue 👋', 'success');
+                showNotification('Connexion réussie ! Bienvenue', 'success');
                 
                 // Redirection vers le dashboard
                 setTimeout(() => {
@@ -266,7 +266,7 @@ if (registerForm) {
                 
                 localStorage.setItem('studyhub_user', JSON.stringify(userData));
                 
-                showNotification('Compte créé avec succès ! 🎉', 'success');
+                showNotification('Compte créé avec succès !', 'success');
                 
                 setTimeout(() => {
                     window.location.href = 'dashboard.html';
@@ -316,4 +316,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-console.log('🔐 Auth system loaded');
+console.log('Auth system loaded');
