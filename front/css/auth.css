@@ -5,7 +5,7 @@
     min-height: 100vh;
 }
 
-/* Partie visuelle gauche */
+/* Partie visuelle gauche - Simplifiée */
 .auth-visual {
     background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
     color: var(--white);
@@ -17,6 +17,7 @@
     overflow: hidden;
 }
 
+/* Effet de fond subtil */
 .auth-visual::before {
     content: '';
     position: absolute;
@@ -24,24 +25,13 @@
     right: -50%;
     width: 150%;
     height: 150%;
-    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
-    animation: rotate 30s linear infinite;
-}
-
-@keyframes rotate {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+    background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 70%);
 }
 
 .visual-content {
     position: relative;
     z-index: 1;
     max-width: 500px;
-    animation: fadeIn 0.8s ease-out;
 }
 
 .logo-link {
@@ -50,61 +40,15 @@
     margin-bottom: 3rem;
 }
 
+/* Illustration simple avec emoji */
 .visual-illustration {
-    position: relative;
-    width: 200px;
-    height: 200px;
-    margin: 0 auto 3rem;
+    text-align: center;
+    margin-bottom: 2rem;
 }
 
-.illustration-circle {
-    position: absolute;
-    border-radius: 50%;
-    border: 2px solid rgba(255, 255, 255, 0.2);
-}
-
-.circle-1 {
-    width: 200px;
-    height: 200px;
-    top: 0;
-    left: 0;
-    animation: pulse 3s ease-in-out infinite;
-}
-
-.circle-2 {
-    width: 150px;
-    height: 150px;
-    top: 25px;
-    left: 25px;
-    animation: pulse 3s ease-in-out 0.5s infinite;
-}
-
-.circle-3 {
-    width: 100px;
-    height: 100px;
-    top: 50px;
-    left: 50px;
-    animation: pulse 3s ease-in-out 1s infinite;
-}
-
-@keyframes pulse {
-    0%, 100% {
-        transform: scale(1);
-        opacity: 1;
-    }
-    50% {
-        transform: scale(1.1);
-        opacity: 0.7;
-    }
-}
-
-.illustration-icon {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 5rem;
-    animation: float 3s ease-in-out infinite;
+.illustration-main {
+    font-size: 6rem;
+    display: inline-block;
 }
 
 .visual-content h2 {
@@ -171,18 +115,6 @@
 .form-content {
     width: 100%;
     max-width: 450px;
-    animation: slideIn 0.8s ease-out;
-}
-
-@keyframes slideIn {
-    from {
-        opacity: 0;
-        transform: translateX(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
 }
 
 .form-header {
@@ -463,6 +395,11 @@
     color: var(--primary);
 }
 
+/* Logo dans le panneau gauche */
+.logo-icon {
+    font-size: 2rem;
+}
+
 /* Responsive */
 @media (max-width: 968px) {
     .auth-container {
@@ -491,5 +428,13 @@
         flex-direction: column;
         align-items: flex-start;
         gap: 1rem;
+    }
+
+    .visual-stats {
+        gap: 2rem;
+    }
+
+    .visual-content h2 {
+        font-size: 2rem;
     }
 }
